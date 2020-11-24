@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Proflie } from "../../../assets/index";
+import { Proflie, User } from "../../../assets/index";
 
 const BodyBox = styled.div`
   width: 100%;
@@ -12,7 +12,7 @@ const BodyBox = styled.div`
 const Profile = styled.div`
   width: 55%;
   height: 60%;
-  box-shadow: 0 1px 4px #feb201;
+  box-shadow: 0 1px 4px #c3c7c7;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,6 +21,7 @@ const Profile = styled.div`
 
 const ProfileBox = styled.div`
   margin: 20px;
+  border-radius: 5px;
   box-shadow: 0 1px 4px #c3c7c7;
   width: 30%;
   height: 70%;
@@ -34,7 +35,7 @@ const Photo = styled.div`
   margin: 20px;
   width: 120px;
   height: 120px;
-  background-image: url(${Proflie});
+  background-image: url(${User});
   background-size: 120px;
   border-radius: 50px;
 `;
@@ -52,58 +53,13 @@ const Id = styled(Name)``;
 
 const Mail = styled(Name)``;
 
-const DetailBox = styled.div`
-  margin: 20px;
-  width: 50%;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  font-weight: 300;
-`;
-const JobBox = styled.div`
-margin: 10px;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-const JobDetail = styled.div`
-  margin: 10px;
-  width: 65px;
-  font-size: 20px;
-  border-right: 3px solid #feb201;
-  font-weight: 300;
-`;
-const Job = styled.div`
-padding: 5px;
-  width: 60%;
-  font-size: 20px;
-  margin: 10px;
-  font-weight: 300;
-  border-bottom: 1px solid #471b4b;
-`;
-
 const Introduce = styled.div`
   margin: 20px;
+  border-radius: 5px;
   padding: 10px;
-  width: 70%;
-  height: 250px;
-
-  box-shadow: 0px 3px 5px #00000029;
+  width: 50%;
+  height: 100px;
+  box-shadow: 0 1px 4px #c3c7c7;
 `;
 
-export {
-  BodyBox,
-  Profile,
-  ProfileBox,
-  Photo,
-  Name,
-  Id,
-  Mail,
-  DetailBox,
-  JobBox,
-  Job,
-  JobDetail,
-  Introduce,
-};
+export { BodyBox, Profile, ProfileBox, Photo, Name, Id, Mail, Introduce };
