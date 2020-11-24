@@ -9,27 +9,23 @@ import {
   Calender,
   MyPage,
   MainPage,
+  ApplyView,
+  ConselorLogin,
 } from "../component";
 import Header from "../component/Main";
 
 const Router = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route component={VideoCall} path="/call" />
-          <Route component={CounselorList} path="/search/:search" />
-          <Route component={CounselorBookedList} path="/bookedList" />
-          <Route path="/" component={MainPage} exact />
-          <Route path="/calender" component={Calender} />
-          <Route path="/sign-in" component={Signin} exact />
-          <Route path="/user-signup" component={UserSignUp} exact />
-          <Route path="/apply-view" component={ApplyView} exact />
-          <Route path="/mypage" component={MyPage} exact />
-        </Switch>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={MainPage} exact />
+        <Route path="/sign-in" component={Signin} exact />
+        <Route path="/user-signup" component={UserSignUp} exact />
+        <Route path="/apply-view" component={ApplyView} exact />
+        <Route path="/mypage" component={MyPage} exact />
+        <Router path="/conselor-login" component={ConselorLogin} exact />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
