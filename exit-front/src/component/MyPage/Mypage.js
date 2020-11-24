@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Main/Header";
 import * as S from "../Style/Mypage/style";
-import axios from 'axios';
+import axios from "axios";
 
+function Mypage() {
+  const [user, setUser] = useState({});
 
-function Mypage({ name, id, mail, introduce }) {
+  const getUser = async () => {
+    const res = await axios.get("/auth/counselor", {
+      headers: {
+        Authorization: "jwt eysdgsdgsd.eyafdgsdg.agagaga",
+      },
+    });
+
+    setUser(res.data);
+
+    /* {
+      "uid": "gksqls0128",
+      "email": "hanbin8269@gmail.com",
+      "username": "정한빈",
+      "is_counselor": true,
+      "is_client": false,
+      "introduction": "~~를 하고 싶은 ~~ 입니다~~",
+      "category": [
+        "진로",
+        "연애"
+      ]
+    } */
+
+    console.log(res);
+  };
 
   return (
     <>
@@ -14,12 +39,12 @@ function Mypage({ name, id, mail, introduce }) {
           {/* 프로필 */}
           <S.ProfileBox>
             <S.Photo></S.Photo>
-            <S.Name>{name}강은빈</S.Name>
-            <S.Id>{id}silverbeen </S.Id>
-            <S.Mail>{mail}kub9722@gmail.com</S.Mail>
+            <S.Name>{user.username}</S.Name>
+            <S.Id>{user.uid} </S.Id>
+            <S.Mail>{user.email}</S.Mail>
           </S.ProfileBox>
           {/* 소개  */}
-          <S.Introduce>{introduce}안녕하세요</S.Introduce>
+          <S.Introduce>{user.introduction}</S.Introduce>
         </S.Profile>
       </S.BodyBox>
     </>
