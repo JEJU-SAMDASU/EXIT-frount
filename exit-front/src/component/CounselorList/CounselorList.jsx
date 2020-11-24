@@ -16,6 +16,7 @@ const CounselorList = () => {
       name: "오준상",
       intro: "저는 오준상이고 테스트 중입니다.",
       score: 5,
+      counselor: "test",
     },
   ]);
   return (

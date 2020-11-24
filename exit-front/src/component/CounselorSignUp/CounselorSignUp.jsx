@@ -26,27 +26,31 @@ function UserSignUp() {
     return `${startTime}~${endTime}`;
   };
   const buttonClickHandler = async () => {
-    const body = {
-      uid: id,
-      email,
-      username: name,
-      password,
-      introduction,
-      is_counselor: true,
-      is_client: false,
-      category: [category],
-      able_time: [
-        getAbleTimeText(calenderData[0][0], calenderData[1][0]),
-        getAbleTimeText(calenderData[0][1], calenderData[1][1]),
-        getAbleTimeText(calenderData[0][2], calenderData[1][2]),
-        getAbleTimeText(calenderData[0][3], calenderData[1][3]),
-        getAbleTimeText(calenderData[0][4], calenderData[1][4]),
-        getAbleTimeText(calenderData[0][5], calenderData[1][5]),
-        getAbleTimeText(calenderData[0][6], calenderData[1][6]),
-      ],
-    };
-    await axios.post(`http://${URL}/auth/counselor/sign-up/`, body);
-    history.push("/");
+    try {
+      const body = {
+        uid: id,
+        email,
+        username: name,
+        password,
+        introduction,
+        is_counselor: true,
+        is_client: false,
+        category: [category],
+        able_time: [
+          getAbleTimeText(calenderData[0][0], calenderData[1][0]),
+          getAbleTimeText(calenderData[0][1], calenderData[1][1]),
+          getAbleTimeText(calenderData[0][2], calenderData[1][2]),
+          getAbleTimeText(calenderData[0][3], calenderData[1][3]),
+          getAbleTimeText(calenderData[0][4], calenderData[1][4]),
+          getAbleTimeText(calenderData[0][5], calenderData[1][5]),
+          getAbleTimeText(calenderData[0][6], calenderData[1][6]),
+        ],
+      };
+      await axios.post(`http://${URL}/auth/counselor/sign-up/`, body);
+      history.push("/");
+    } catch (error) {
+      alert("입력 정보를 확인해 주세요.");
+    }
   };
   return (
     <S.Main>

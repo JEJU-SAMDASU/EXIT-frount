@@ -5,9 +5,9 @@ import Calender from "./Calender";
 const Modal = ({ data, dataChange, setModalAble }) => {
   const [content, setContent] = useState("");
   const [calenderData, setCalenderData] = useState([
-    { isAble: true, isSelected: false },
     { isAble: false, isSelected: false },
-    { isAble: true, isSelected: false },
+    { isAble: false, isSelected: false },
+    { isAble: false, isSelected: false },
     { isAble: false, isSelected: false },
     { isAble: false, isSelected: false },
     { isAble: false, isSelected: false },
@@ -18,6 +18,9 @@ const Modal = ({ data, dataChange, setModalAble }) => {
     ["11:11", "", "12:00", "", "", "", ""],
   ]);
   const [type, setType] = useState("chatting");
+  const buttonClickHandler = () => {
+    setModalAble(false);
+  };
   return (
     <S.ModalBackground
       onClick={() => {
@@ -61,7 +64,9 @@ const Modal = ({ data, dataChange, setModalAble }) => {
             >
               화상으로 상담
             </S.BookModalChoiceButton>
-            <S.BookModalSendButton>신청하기</S.BookModalSendButton>
+            <S.BookModalSendButton onClick={buttonClickHandler}>
+              신청하기
+            </S.BookModalSendButton>
           </S.BookModalButtonWrapper>
         </S.BookModalBookWrapper>
       </S.BookModal>

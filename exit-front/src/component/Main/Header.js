@@ -1,7 +1,8 @@
-//유저가 로그인 했을때
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useHistory, Link } from "react-router-dom";
 import * as S from "../Style/Main/style";
+import { URL } from "../../api";
 
 const Header = () => {
   const history = useHistory();
@@ -16,8 +17,21 @@ const Header = () => {
   const logOut = () => {
     localStorage.clear();
   };
+  const checkIsCounselor = async () => {
+    try {
+      const token = `JWT ${localStorage.getItem("token")}`;
+      const { data } = await axios.get(`http://${URL}/auth/counselor/`, {
+        headers: {
+          Authorization: token,
+        },
+      });
+      setIsCounselor(data.is_counselor);
+    } catch (error) {}
+  };
   useEffect(() => {
-    if (localStorage.getItem("token")) setIsLogin(false);
+    if (!localStorage.getItem("token")) setIsLogin(false);
+    else setIsLogin(true);
+    checkIsCounselor();
   }, []);
   return (
     <S.Haeder>

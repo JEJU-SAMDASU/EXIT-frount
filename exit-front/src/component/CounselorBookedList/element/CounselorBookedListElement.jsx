@@ -14,7 +14,11 @@ const CounselorBookedListElement = ({
       bookedList.filter((bookedData) => bookedData.id !== id)
     );
   };
-  const approveButtonClickHandler = () => {};
+  const approveButtonClickHandler = () => {
+    window.open(
+      "https://vinylrich.github.io/remon-devguide-quickstart/simplevideocall-tutorial.html"
+    );
+  };
   return (
     <S.CounselorBookedListElement>
       <div>

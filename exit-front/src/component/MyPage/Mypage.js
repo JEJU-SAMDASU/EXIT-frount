@@ -1,36 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Main/Header";
 import * as S from "../Style/Mypage/style";
 import axios from "axios";
+import { URL } from "../../api";
 
 function Mypage() {
   const [user, setUser] = useState({});
 
   const getUser = async () => {
-    const res = await axios.get("/auth/counselor", {
+    const res = await axios.get(`http://${URL}/auth/counselor/`, {
       headers: {
-        Authorization: "jwt eysdgsdgsd.eyafdgsdg.agagaga",
+        Authorization: `JWT ${localStorage.getItem("token")}`,
       },
     });
-
     setUser(res.data);
-
-    /* {
-      "uid": "gksqls0128",
-      "email": "hanbin8269@gmail.com",
-      "username": "정한빈",
-      "is_counselor": true,
-      "is_client": false,
-      "introduction": "~~를 하고 싶은 ~~ 입니다~~",
-      "category": [
-        "진로",
-        "연애"
-      ]
-    } */
-
-    console.log(res);
   };
-
+  useEffect(() => {
+    getUser();
+  }, []);
   return (
     <>
       <Header />
