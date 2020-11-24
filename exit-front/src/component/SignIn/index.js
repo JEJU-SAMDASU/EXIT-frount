@@ -1,7 +1,10 @@
+//공통 로그인
 import React, { Link } from "react";
 import * as S from "../Style/Signin/style";
 import { UserSignUp } from "../UserSignUp/index";
+import axios from 'axios';
 
+axios.get('')
 function Signin() {
   return (
     <S.Main>
