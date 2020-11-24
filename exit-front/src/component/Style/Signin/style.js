@@ -17,7 +17,7 @@ const SigninBox = styled.div`
   width: 20%;
   height: 40%;
   border: 1px solid #feb201;
-  box-shadow: 4px 4px 4px    rgba(0, 0, 0, 0.16);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.16);
   //background-color: #fff0ff;
 `;
 
@@ -60,6 +60,15 @@ const Button = styled.button`
   outline: none;
   border: 1px solid #feb201;
   background-color: white;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  &:hover, a:hover {
+    background-color: #feb201;
+    color: white;
+    transition: all 0.5s;
+  }
 `;
 
 export { SigninBox, Header, Input, Main, ButtonBox, Button };
