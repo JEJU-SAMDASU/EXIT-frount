@@ -56,4 +56,29 @@ const Button = styled.button`
   }
 `;
 
-export { Main, SignUpBox, Header, Input, Button };
+const CounselorSignUpBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 80%;
+  border: 1px solid #feb201;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.16);
+`;
+
+const CalenderWrapper = styled.div`
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+`;
+
+export {
+  Main,
+  SignUpBox,
+  Header,
+  Input,
+  Button,
+  CounselorSignUpBox,
+  CalenderWrapper,
+};

@@ -24,6 +24,10 @@ export const CalenderTable = styled.table`
     display: flex;
     justify-content: center;
     background-color: #ffe3a2;
+    width: 80px;
+  }
+  > tbody > tr > td {
+    background-color: #ffe3a2;
   }
   .blue {
     color: blue;

@@ -1,7 +1,25 @@
 import React from "react";
 import * as S from "../style";
 
-const CounselorListElement = ({ src, name, intro, score }) => {
+const CounselorListElement = ({
+  id,
+  src,
+  name,
+  intro,
+  score,
+  setSelectedData,
+  setModalAble,
+}) => {
+  const buttonClickHandler = () => {
+    setSelectedData({
+      src,
+      name,
+      intro,
+      score,
+      id,
+    });
+    setModalAble(true);
+  };
   return (
     <S.CounselorListElement>
       <S.CounselorListElementUser>
@@ -12,7 +30,9 @@ const CounselorListElement = ({ src, name, intro, score }) => {
         <p>{intro}</p>
         <div>
           <p>{score}</p>
-          <S.CounselorListElementButton>상담신청</S.CounselorListElementButton>
+          <S.CounselorListElementButton onClick={buttonClickHandler}>
+            상담신청
+          </S.CounselorListElementButton>
         </div>
       </S.CounselorListElementDescription>
     </S.CounselorListElement>
