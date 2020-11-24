@@ -10,17 +10,24 @@ const BodyBox = styled.div`
 `;
 
 const Profile = styled.div`
-  width: 55%;
+  width: 60%;
   height: 60%;
   box-shadow: 0 1px 4px #c3c7c7;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  .introduce {
+    h1{
+      font-size: 20px;
+      font-weight: 300;
+      margin : 20px 0 20px 0 ;
+    }
+  }
 `;
 
 const ProfileBox = styled.div`
-  margin: 20px;
+  margin: 20px 50px 20px 20px;
   border-radius: 5px;
   box-shadow: 0 1px 4px #c3c7c7;
   width: 30%;
@@ -54,10 +61,10 @@ const Id = styled(Name)``;
 const Mail = styled(Name)``;
 
 const Introduce = styled.div`
-  margin: 20px;
+  margin: 20px 0 80px 0;
   border-radius: 5px;
   padding: 10px;
-  width: 50%;
+  width: 580px;
   height: 100px;
   box-shadow: 0 1px 4px #c3c7c7;
 `;

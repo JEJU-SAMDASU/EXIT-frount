@@ -11,3 +11,4 @@ export { default as Modal } from "./Modal";
 export { default as ConselorLogin } from "./CounselorLogin/Login";
 export { default as VideoCall } from "./VideoCall";
 export { default as UserBookList } from "./UserBookList";
+export { default as CounselorPage } from './CounselorPage/CounselorPage';
