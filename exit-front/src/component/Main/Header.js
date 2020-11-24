@@ -63,12 +63,12 @@ const Header = () => {
                 <Link to="/bookList">상담 신청 보기</Link>
               </S.Title>
               <S.Title>
+                <Link to="/mypage">MYPAGE</Link>
+              </S.Title>
+              <S.Title>
                 <Link to="/" onClick={logOut}>
                   LOGOUT
                 </Link>
-              </S.Title>
-              <S.Title>
-                <Link to="/mypage">MYPAGE</Link>
               </S.Title>
             </>
           )

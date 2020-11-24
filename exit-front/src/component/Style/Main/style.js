@@ -37,19 +37,20 @@ const LogoImg = styled.div`
 
 const Search = styled.div`
   margin: 0 30px;
-  width: 300px;
-  height: 30px;
+  width: 430px;
+  height: 40px;
   border: 1px solid #feb201;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: ${({ boxShadow }) => boxShadow};
   transition: all 2s;
 `;
 
 const Input = styled.input`
+  padding: 7px 15px;
   outline: none;
   border: none;
   margin: 0 10px;
-  width: 200px;
+  width: 350px;
   height: 25px;
   font-size: 15px;
   background-color: transparent;

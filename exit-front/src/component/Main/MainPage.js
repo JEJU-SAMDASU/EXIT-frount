@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as S from "../Style/Main/style";
 import Header from "./Header";
+import Chat from "../Chat/Chat";
 
 function MainPage() {
   const [toggle, SetToggle] = useState(false);
@@ -42,16 +43,17 @@ function MainPage() {
   }, []);
 
   return (
-    <S.BodyBox>
-      <Header />
-      <S.Main>
-        <S.Baner></S.Baner>
-        <S.Silder>
-          <div className="silder">
-            <S.CallImg key="one" ref={one} toggle={toggle} />
-            <S.CallImg2 key="two" ref={two} toggle={toggle} />
-          </div>
-          {/* <div className="button">
+    <>
+      <S.BodyBox>
+        <Header />
+        <S.Main>
+          <S.Baner></S.Baner>
+          <S.Silder>
+            <div className="silder">
+              <S.CallImg key="one" ref={one} toggle={toggle} />
+              <S.CallImg2 key="two" ref={two} toggle={toggle} />
+            </div>
+            {/* <div className="button">
             <S.Button
               onClick={ButtonCilck}
               button={button === 0 ? "black" : "white"}
@@ -61,11 +63,13 @@ function MainPage() {
               button={button === 1 ? "black" : "white"}
             ></S.Button>
           </div> */}
-        </S.Silder>
-        <S.Cover></S.Cover>
-        <S.Chat></S.Chat>
-      </S.Main>
-    </S.BodyBox>
+          </S.Silder>
+          <S.Cover></S.Cover>
+          <S.Chat></S.Chat>
+        </S.Main>
+      </S.BodyBox>
+      <Chat />
+    </>
   );
 }
 
