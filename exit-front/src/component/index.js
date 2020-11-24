@@ -4,3 +4,4 @@ export { default as Header } from "./Main/Header";
 export { default as MainPage } from "./Main/MainPage";
 export { default as ApplyView } from "./ApplyView/ApplyView";
 export { default as MyPage } from "./MyPage/Mypage";
+export { default as ConselorLogin } from './CounselorLogin/Login';

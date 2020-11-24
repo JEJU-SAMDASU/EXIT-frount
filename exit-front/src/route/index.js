@@ -6,6 +6,7 @@ import {
   MainPage,
   ApplyView,
   MyPage,
+  ConselorLogin,
 } from "../component/index";
 
 const Router = () => {
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path="/user-signup" component={UserSignUp} exact />
         <Route path="/apply-view" component={ApplyView} exact />
         <Route path="/mypage" component={MyPage} exact />
+        <Router path="/conselor-login" component={ConselorLogin} exact />
       </Switch>
     </BrowserRouter>
   );
