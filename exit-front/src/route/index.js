@@ -11,6 +11,7 @@ import {
   ConselorLogin,
   VideoCall,
   UserBookList,
+  CounselorPage,
 } from "../component";
 
 const Router = () => {
@@ -28,6 +29,7 @@ const Router = () => {
           <Route path="/user-signup" component={UserSignUp} exact />
           <Route path="/sign-in" component={Signin} exact />
           <Route path="/conselor-login" component={ConselorLogin} exact />
+          <Route path="/counselor-page" component={CounselorPage} exact />
         </Switch>
       </BrowserRouter>
     </>
