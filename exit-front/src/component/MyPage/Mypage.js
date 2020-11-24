@@ -8,7 +8,7 @@ function Mypage({ name, id, mail, introduce }) {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <S.BodyBox>
         <S.Profile>
           {/* 프로필 */}

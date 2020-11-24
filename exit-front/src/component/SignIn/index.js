@@ -3,6 +3,7 @@ import * as S from "../Style/Signin/style";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { URL } from "../../api";
 
 function Signin() {
   const history = useHistory();
@@ -12,10 +13,11 @@ function Signin() {
 
   const buttonClickHandler = async () => {
     try {
-      await axios.post("/auth/client/sign-up", {
+      const { data } = await axios.post(`http://${URL}/auth/client/login/`, {
         uid: id,
         password,
       });
+      localStorage.setItem("token", data.token);
       history.push("/");
     } catch (error) {
       alert("입력 정보를 확인해 주세요");
@@ -44,7 +46,7 @@ function Signin() {
         </S.Input>
         <S.ButtonBox>
           <S.Button onClick={buttonClickHandler}>LOGIN</S.Button>
-          <S.Button >
+          <S.Button>
             <Link to="/user-signup">SIGN UP</Link>
           </S.Button>
         </S.ButtonBox>

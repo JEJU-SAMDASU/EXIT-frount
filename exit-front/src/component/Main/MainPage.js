@@ -43,7 +43,7 @@ function MainPage() {
 
   return (
     <S.BodyBox>
-      <Header></Header>
+      <Header />
       <S.Main>
         <S.Baner></S.Baner>
         <S.Silder>
