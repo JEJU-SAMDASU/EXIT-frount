@@ -3,6 +3,7 @@ import { Logo } from "../../../assets/index";
 
 //헤더
 const Haeder = styled.div`
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,9 +60,12 @@ const Title = styled.li`
   a {
     text-decoration: none;
     color: black;
+    padding: 5px 0;
   }
   a:hover {
     color: #feb201;
+    transition: all 0.3s;
+    border-bottom: 2px solid #feb201;
   }
 `;
 

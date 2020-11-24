@@ -40,12 +40,12 @@ const Header = () => {
         </S.Title>
         <S.Title>
           <Link to="/mypage" onClick={mypage}>
-            마이 페이지
+            MYPAGE
           </Link>
         </S.Title>
         <S.Title>
           <Link to="/sign-in" onClick={login}>
-            로그인/회원가입
+            LOGIN
           </Link>
         </S.Title>
       </ul>
