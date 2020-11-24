@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import * as S from "./style";
 import ListElement from "./Element";
 import Modal from "../Modal";
+import Header from "../Main/Header";
 
 const CounselorList = () => {
   const params = useParams();
@@ -19,6 +20,7 @@ const CounselorList = () => {
   ]);
   return (
     <S.CounselorList>
+      <Header />
       {modalAble ? (
         <Modal
           data={selectedData}

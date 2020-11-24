@@ -3,6 +3,7 @@ import { Logo, Main1, Main2, Main3, Main4 } from "../../../assets/index";
 
 //헤더
 const Haeder = styled.div`
+  top: 0;
   position: fixed;
   display: flex;
   flex-direction: row;

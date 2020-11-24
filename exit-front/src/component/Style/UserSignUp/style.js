@@ -30,7 +30,7 @@ const Header = styled.div`
 
 const Input = styled.div`
   margin: 15px;
-  width: 220px;
+  width: 300px;
   height: 30px;
   border-bottom: 1px solid #feb201;
   input {

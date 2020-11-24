@@ -3,6 +3,7 @@ import * as S from "../Style/UserSignUp/style";
 import { useHistory } from "react-router-dom";
 import "../../index.css";
 import axios from "axios";
+import { URL } from "../../api";
 
 function UserSignUp() {
   const history = useHistory();
@@ -20,11 +21,13 @@ function UserSignUp() {
 
   const buttonClickHandler = async () => {
     try {
-      await axios.post("/auth/client/sign-up", {
+      await axios.post(`http://${URL}/auth/client/sign-up/`, {
         uid: id,
         email,
         password,
-        name,
+        username: name,
+        is_counselor: false,
+        is_user: true,
       });
       history.push("/");
     } catch (error) {
@@ -59,7 +62,11 @@ function UserSignUp() {
           ></input>
         </S.Input>
         <S.Input>
-          <input placeholder="RE_PASSWORD" type="password"></input>
+          <input
+            placeholder="RE_PASSWORD"
+            type="password"
+            onChange={(event) => setrePassword(event.target.vaule)}
+          ></input>
         </S.Input>
         <S.Input>
           <input

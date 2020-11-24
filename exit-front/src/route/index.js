@@ -5,31 +5,29 @@ import {
   Signin,
   UserSignUp,
   CounselorBookedList,
-  Calender,
   MyPage,
   MainPage,
   CounselorSignUp,
-  ApplyView,
   ConselorLogin,
+  VideoCall,
+  UserBookList,
 } from "../component";
-import Header from "../component/Main";
 
 const Router = () => {
   return (
     <>
       <BrowserRouter>
-        <Header />
         <Switch>
-          <Route component={CounselorList} path="/search/:search" />
-          <Route component={CounselorBookedList} path="/bookedList" />
           <Route path="/" component={MainPage} exact />
-          <Route path="/calender" component={Calender} />
-          <Route path="/sign-in" component={Signin} exact />
-          <Route path="/user-signup" component={UserSignUp} exact />
-          <Route path="/counselor-signup" component={CounselorSignUp} exact />
-          <Route path="/apply-view" component={ApplyView} exact />
+          <Route component={CounselorList} exact path="/search/:search" />
+          <Route component={CounselorBookedList} exact path="/bookedList" />
+          <Route component={UserBookList} exact path="/bookList" />
+          <Route path="/video/:code" component={VideoCall} />
           <Route path="/mypage" component={MyPage} exact />
-        <Router path="/conselor-login" component={ConselorLogin} exact />
+          <Route path="/counselor-signup" component={CounselorSignUp} exact />
+          <Route path="/user-signup" component={UserSignUp} exact />
+          <Route path="/sign-in" component={Signin} exact />
+          <Route path="/conselor-login" component={ConselorLogin} exact />
         </Switch>
       </BrowserRouter>
     </>
