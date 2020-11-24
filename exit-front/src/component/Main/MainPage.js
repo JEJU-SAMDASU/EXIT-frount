@@ -1,23 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as S from "../Style/Main/style";
 import Header from "./Header";
 
 function MainPage() {
-  const [imgHidden, setImgHidden] = useState("none");
-  //const [button, setButton] = useState("white");
-
-  const button = false;
+  const [toggle, SetToggle] = useState(false);
+  const one = useRef(null);
+  const two = useRef(null);
+  const [button, setButton] = useState(0);
+  const [img, setImg] = useState("0");
+  const [slider, setSlider] = useState(null);
 
   const ButtonCilck = () => {
-    if (button != button) {
-      button("black");
-    }
-    else{
-      button("white");
-    }
+    /*     if (button === 0) {
+      setButton(1);
+      setImg("628px");
+    } else {
+      setButton(0);
+    } */
+    setTimeout(() => {});
   };
 
-  useEffect(() => {}, [button]);
+  const slide = (flag) => {
+    /* if (flag % 2 === 0) {
+      one.current.style.transform = "translate(-100%)";
+      two.current.style.transform = "translate(-100%)";
+    } else {
+      two.current.style.transform = "translate(0)";
+      one.current.style.transform = "translate(0)";
+    } */
+
+    SetToggle((prev) => !prev);
+    setSlider(setTimeout(slide, 3000, flag + 1));
+  };
+
+  useEffect(() => {
+    setSlider(setTimeout(slide, 3000, 0));
+
+    return () => {
+      clearInterval(slider);
+    };
+  }, []);
 
   return (
     <S.BodyBox>
@@ -26,14 +48,21 @@ function MainPage() {
         <S.Baner></S.Baner>
         <S.Silder>
           <div className="silder">
-            <S.CallImg></S.CallImg>
-            <S.CallImg2></S.CallImg2>
+            <S.CallImg key="one" ref={one} toggle={toggle} />
+            <S.CallImg2 key="two" ref={two} toggle={toggle} />
           </div>
-          <div className="button">
-            <S.Button onClick={ButtonCilck} button={button}></S.Button>
-            <S.Button onClick={ButtonCilck} button={button}></S.Button>
-          </div>
+          {/* <div className="button">
+            <S.Button
+              onClick={ButtonCilck}
+              button={button === 0 ? "black" : "white"}
+            ></S.Button>
+            <S.Button
+              onClick={ButtonCilck}
+              button={button === 1 ? "black" : "white"}
+            ></S.Button>
+          </div> */}
         </S.Silder>
+        <S.Cover></S.Cover>
         <S.Chat></S.Chat>
       </S.Main>
     </S.BodyBox>

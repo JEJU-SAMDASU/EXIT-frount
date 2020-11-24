@@ -1,8 +1,11 @@
 import React from "react";
 import Header from "../Main/Header";
 import * as S from "../Style/Mypage/style";
+import axios from 'axios';
+
 
 function Mypage({ name, id, mail, introduce }) {
+
   return (
     <>
       <Header></Header>

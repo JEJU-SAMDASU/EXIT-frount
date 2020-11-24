@@ -84,42 +84,58 @@ const Main = styled.div`
 `;
 
 const Baner = styled.div`
-  margin-top: 10px;
+  background-repeat: no-repeat;
+  margin-top: 40px;
   background-image: url(${Main1});
   width: 100%;
-  height: 510px;
+  height: 550px;
 `;
 
 const Silder = styled.div`
-  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 280px;
+  /* width: 100%; */
   height: 520px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 1s;
   .silder {
-    width: 60%;
+    /* width: 80%; */
     height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
   .button {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 60%;
+    /* width: 60%; */
     height: 20px;
   }
 `;
 
-const CallImg = styled.div`
-  width: 65%;
+const DefaultImg = styled.div`
+  background-repeat: no-repeat;
+  /* width: 90%; */
+  width: 735px;
   height: 470px;
+  background-size: 100%;
+  transition: 1s all;
+  transform: translateX(${(props) => (props.toggle ? "-100%" : 0)});
+`;
+
+const CallImg = styled(DefaultImg)`
   background-image: url(${Main3});
 `;
 
-const CallImg2 = styled.div``;
+const CallImg2 = styled(DefaultImg)`
+  background-image: url(${Main4});
+`;
 
 const Button = styled.div`
   margin: 0 10px;
@@ -127,7 +143,7 @@ const Button = styled.div`
   height: 5px;
   border-radius: 50px;
   border: 1px solid black;
-  background-color: ${({button})=>button};
+  background-color: ${({ button }) => button};
 `;
 
 const Chat = styled.div`
@@ -138,6 +154,15 @@ const Chat = styled.div`
   background-size: 580px;
   right: 100px;
   top: 300px;
+`;
+
+const Cover = styled.div`
+  position: absolute;
+  right: 145px;
+  bottom: 25px;
+  width: 760px;
+  height: 470px;
+  background-color: white;
 `;
 
 export {
@@ -154,4 +179,5 @@ export {
   CallImg2,
   Button,
   Chat,
+  Cover,
 };
