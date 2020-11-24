@@ -6,6 +6,7 @@ export const CounselorList = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 70px;
 `;
 
 export const CounselorListSearchTitle = styled.h1`

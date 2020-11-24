@@ -3,11 +3,7 @@ import * as S from "./style";
 import TableRow from "./CalenderTableRow";
 import TableHeaderRow from "./CalenderTableRow/TableHeaderRow";
 
-const Calender = () => {
-  const [calenderData, setCalenderData] = useState([
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-  ]);
+const Calender = ({ calenderData, setCalenderData }) => {
   return (
     <S.Calender>
       <S.CalenderTable>

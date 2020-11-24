@@ -13,6 +13,7 @@ export const CounselorBookedList = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 70px;
 `;
 
 export const CounselorBookedListElement = styled.div`
