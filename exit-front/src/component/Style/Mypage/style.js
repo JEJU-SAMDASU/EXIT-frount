@@ -10,9 +10,8 @@ const BodyBox = styled.div`
 `;
 
 const Profile = styled.div`
-  width: 70%;
+  width: 55%;
   height: 60%;
-  border: 1px solid #feb201;
   box-shadow: 0 1px 4px #feb201;
   display: flex;
   flex-direction: row;
@@ -41,6 +40,7 @@ const Photo = styled.div`
 `;
 
 const Name = styled.div`
+  padding: 5px;
   margin: 10px;
   width: 70%;
   height: 30px;
@@ -54,18 +54,18 @@ const Mail = styled(Name)``;
 
 const DetailBox = styled.div`
   margin: 20px;
-  width: 60%;
+  width: 50%;
   height: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-weight: 300;
 `;
 const JobBox = styled.div`
+margin: 10px;
   width: 90%;
   display: flex;
   flex-direction: row;
-  align-items: center;  
+  align-items: center;
 `;
 
 const JobDetail = styled.div`
@@ -76,16 +76,18 @@ const JobDetail = styled.div`
   font-weight: 300;
 `;
 const Job = styled.div`
+padding: 5px;
   width: 60%;
   font-size: 20px;
   margin: 10px;
   font-weight: 300;
+  border-bottom: 1px solid #471b4b;
 `;
 
 const Introduce = styled.div`
   margin: 20px;
   padding: 10px;
-  width: 90%;
+  width: 70%;
   height: 250px;
 
   box-shadow: 0px 3px 5px #00000029;
