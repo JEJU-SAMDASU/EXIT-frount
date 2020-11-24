@@ -5,3 +5,5 @@ export { default as Main1 } from "./Main1.svg";
 export { default as Main2 } from "./Main2.png";
 export { default as Main3 } from "./Main3.svg";
 export { default as Main4 } from "./Main4.svg";
+export { default as Aa } from './Aa.svg';
+export { default as Send } from './Send.svg';
