@@ -9,7 +9,7 @@ import {
 
 export const CounselorBookedList = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,4 +71,6 @@ export const CounselorBookedListElementCallButton = styled.button`
   }
 `;
 
-export const CounselorBookedListElementWrapper = styled(CounselorListWrapper)``;
+export const CounselorBookedListElementWrapper = styled(CounselorListWrapper)`
+  height: 675px;
+`;
