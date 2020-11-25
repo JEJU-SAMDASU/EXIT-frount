@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="199.136" height="213.726" viewBox="0 0 199.136 213.726">
+  <g id="그룹_1" data-name="그룹 1" transform="translate(66 74.87)">
+    <path id="패스_1" data-name="패스 1" d="M102.766-14.538l68.371,174.426-48.99,39.3L-28,133.078Z" transform="translate(-38 -60.332)" fill="#feb201"/>
+    <ellipse id="타원_1" data-name="타원 1" cx="16.5" cy="17" rx="16.5" ry="17" transform="translate(44 -41.991)" fill="#000201"/>
+    <rect id="사각형_4" data-name="사각형 4" width="27.994" height="72.085" rx="13.997" transform="translate(40.696 -7.981) rotate(16)" fill="#000201"/>
+    <rect id="사각형_5" data-name="사각형 5" width="43.391" height="16.097" rx="8.048" transform="matrix(0.951, 0.309, -0.309, 0.951, 12.457, -17.171)" fill="#000201"/>
+    <rect id="사각형_6" data-name="사각형 6" width="43.391" height="16.097" rx="8.048" transform="matrix(0.454, 0.891, -0.891, 0.454, 5.99, -45.373)" fill="#000201"/>
+    <rect id="사각형_7" data-name="사각형 7" width="43.391" height="16.097" rx="8.048" transform="translate(56.891 -4.513) rotate(30)" fill="#000201"/>
+    <rect id="사각형_8" data-name="사각형 8" width="43.391" height="16.097" rx="8.048" transform="matrix(0.588, 0.809, -0.809, 0.588, 88.05, 11.578)" fill="#000201"/>
+    <rect id="사각형_9" data-name="사각형 9" width="43.391" height="16.097" rx="8.048" transform="matrix(0.996, -0.087, 0.087, 0.996, -5.248, 58.267)" fill="#000201"/>
+    <rect id="사각형_10" data-name="사각형 10" width="55.289" height="16.097" rx="8.048" transform="translate(-46.15 69.611) rotate(-14)" fill="#000201"/>
+    <rect id="사각형_11" data-name="사각형 11" width="43.391" height="16.097" rx="8.048" transform="translate(18.974 94.792) rotate(-68)" fill="#000201"/>
+    <rect id="사각형_12" data-name="사각형 12" width="43.391" height="16.097" rx="8.048" transform="translate(30.926 81.578) rotate(48)" fill="#000201"/>
+  </g>
+</svg>
